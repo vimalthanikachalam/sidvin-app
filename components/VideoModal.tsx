@@ -15,7 +15,7 @@ const VideoModalInnerView = (props: IVideoModalProps) => {
     <div className='video__modal__container'>
       <Modal show={props.show} fullscreen={true} onHide={() => props.setShow(false)}>
         <div className='video__preview'>
-          <video src={props.video} controls={true} autoPlay={true} muted />
+          <video src={props.video} controls={true} autoPlay muted loop preload='auto'/>
         </div>
         <div onClick={() => props.setShow(false)} className='modal__close__button'>
           <IoCloseCircle />
