@@ -35,17 +35,46 @@
     background-color: var(--primary);
 }
 
+@mixin ripple($duration, $delay) {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #0461ccd6;
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.65,0,.34,1);
+    z-index: -1;
+}
+
+
 .modal__close__button {
     cursor: pointer;
     display: inline-flex;
     font-size: 4rem;
-    color: #ffffff57;
+    color: #ffffffcb;
     text-align: center;
     align-items: center;
     position: absolute;
     bottom: 2rem;
     left: 50%;
     z-index: 999;
+    
+    &::after {
+        @include ripple(3s, 0s);
+      }
 
     &:hover {
         color: #fff;
@@ -59,7 +88,21 @@
     video {
         height: 100%;
         width: 100%;
+        object-fit:cover;
 
     }
 }
+
+@keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75,0.75,1);
+    }
+    
+    to {
+      opacity: 0;
+      transform: scale3d(2,2,1);
+    }
+  }
+  
 
