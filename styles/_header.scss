@@ -1,0 +1,18 @@
+.header__main__wrapper {
+    background-color: var(--primary);
+
+    .header__innerWrapper {
+        max-width: 1400px;
+        margin: auto;
+
+        .header__logoWrapper {
+            padding: 1rem;
+            max-width: 150px;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

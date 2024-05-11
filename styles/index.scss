@@ -1,0 +1,71 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './clashdisplay/css/clash-display.scss';
+@import './variable';
+@import './header';
+@import './homepage';
+@import './videos';
+
+*,
+body body::after,
+body::before {
+  margin: 0;
+}
+
+body,
+button {
+  font-family: "ClashDisplay", "Hepta Slab", serif;
+}
+
+main {
+  // height: calc(100vh - 98px);
+  position: relative;
+}
+
+.application__wrapper {
+  height: 100%;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: var(--primary);
+  }
+}
+
+
+.modal.fade .modal-dialog {
+  transition: transform 500ms ease;
+  transform: translate(0, 500px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.modal-backdrop.fade{
+  transition: all 200ms ease;
+}
+.modal-backdrop.fade.show {
+  backdrop-filter: blur(20px);
+  background-color: hsla(0, 0%, 0%, 0.4);
+  opacity: 1;
+}
+
+.mobile__view {
+  display: none;
+  @media (max-width: 768px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    z-index: 9999;
+  }
+}
