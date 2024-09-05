@@ -3,9 +3,7 @@ import { VideosView } from "@/components/Videos";
 export default function Home() {
   return (
     <>
-      <div className="mobile__view">
-        This site is visible only on larger screens.
-      </div>
+      <div className="mobile__view">This site is visible only on larger screens.</div>
       <div className="homepage__innerView">
         <div className="home__page__container">
           <VideosView />
