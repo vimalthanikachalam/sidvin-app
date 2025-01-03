@@ -25,6 +25,11 @@
             @media(min-width: 1800px) {
                 min-height: 380px;
             }
+
+            @media (max-width: 720px) {
+                width: 100%;
+                max-width: calc(100% - 2rem);
+            }
             
 
             &::after {

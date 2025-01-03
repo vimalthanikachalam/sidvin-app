@@ -25,7 +25,8 @@
     width: 100%;
     margin: auto;
     font-size: 1.2rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     line-height: 1.6;
 }
 
@@ -64,12 +65,13 @@
     cursor: pointer;
     display: inline-flex;
     font-size: 4rem;
-    color: #ffffffcb;
+    color: rgb(234 234 234 / 50%);
     text-align: center;
     align-items: center;
     position: absolute;
     bottom: 2rem;
     left: 50%;
+    transform: translateX(-50%);
     z-index: 999;
     
     &::after {
@@ -88,7 +90,7 @@
     video {
         height: 100%;
         width: 100%;
-        object-fit:cover;
+        object-fit:contain;
 
     }
 }
