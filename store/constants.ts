@@ -16,7 +16,7 @@ export const VIDEOS = [
   {
     ID: "b32d56a7-a81e-422e-a4c3-c7053ed157e3",
     Title: "Human Wealth",
-    VideoSrc: `${BASE_DOMAIN}videos/Human_Wealth_Updated.mp4`,
+    VideoSrc: `${BASE_DOMAIN}videos/Human_Wealth_Updated_v1.mp4`,
     ImageSrc: "/assets/human_wealth.jpg"
   },
   {
